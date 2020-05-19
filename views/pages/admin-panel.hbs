@@ -1,0 +1,151 @@
+{{#> admin}}
+    <div class="container">
+        <h2>Админ панель</h2>
+        <section>
+            <div class="row">
+                <div class="col d-flex align-items-center">
+                    <h5>Последние товары</h5>
+                </div>
+                <div class="col d-flex justify-content-end py-2">
+                    <button type="button" class="btn btn-outline-primary">
+                        <i class="fa fa-plus"></i>
+                        <span>Добавить позицию</ыp>
+                    </button>
+                </div>
+            </div>
+            <table class="table table-hover table-bordered">
+                <thead>
+                    <tr>
+                        <th scope="col">id</th>
+                        <th scope="col">Название</th>
+                        <th scope="col">Категория</th>
+                        <th scope="col">Пол</th>
+                        <th scope="col">Размер</th>
+                        <th scope="col">Цвет</th>
+                        <th scope="col">Ткань</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    {{#each shopItems}}
+                        <tr>
+                            <th scope="col">
+                                {{this.id}}
+                            </th>
+                            <th scope="col">
+                                {{this.name}}
+                            </th>
+                            <th scope="col">
+                                '-'
+                            </th>
+                            <th scope="col">
+                                'муж'
+                            </th>
+                            <th scope="col">
+                                {{this.size}}
+                            </th>
+                            <th scope="col">
+                                '-'
+                            </th>
+                            <th scope="col">
+                                '-'
+                            </th>
+                        </tr>
+                    {{/each}}
+                </tbody>
+            </table>
+            <div class="row ">
+                <div class="col">
+                    <button type="button" class="btn btn-info">
+                        Смотреть все
+                    </button>
+                </div>
+            </div>
+        </section>
+
+        <section class="mt-5">
+            <div class="row">
+                <div class="col d-flex align-items-center">
+                    <h5>Бренды</h5>
+                </div>
+                <div class="col d-flex justify-content-end py-2">
+                    <button type="button" class="btn btn-outline-primary">
+                        <i class="fa fa-plus"></i>
+                        <span>Добавить позицию</ыp>
+                    </button>
+                </div>
+            </div>
+            <table class="table table-hover table-bordered">
+                <thead>
+                    <tr>
+                        <th scope="col">id</th>
+                        <th scope="col">Название</th>
+                        <th scope="col">Страна</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    {{#each brandItems}}
+                        <tr>
+                            <th scope="col">
+                                {{this.id}}
+                            </th>
+                            <th scope="col">
+                                {{this.title}}
+                            </th>
+                            <th scope="col">
+                                {{this.country}}
+                            </th>
+                        </tr>
+                    {{/each}}
+                </tbody>
+            </table>
+            <div class="row ">
+                <div class="col">
+                    <button type="button" class="btn btn-info">
+                        Смотреть все
+                    </button>
+                </div>
+            </div>
+        </section>
+
+        <section class="mt-5">
+            <div class="row">
+                <div class="col d-flex align-items-center">
+                    <h5>Ткань</h5>
+                </div>
+                <div class="col d-flex justify-content-end py-2">
+                    <button type="button" class="btn btn-outline-primary">
+                        <i class="fa fa-plus"></i>
+                        <span>Добавить позицию</ыp>
+                    </button>
+                </div>
+            </div>
+            <table class="table table-hover table-bordered">
+                <thead>
+                    <tr>
+                        <th scope="col">id</th>
+                        <th scope="col">Состав</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    {{#each shopItems}}
+                        <tr>
+                            <th scope="col">
+                                {{this.id}}
+                            </th>
+                            <th scope="col">
+                                {{this.title}}
+                            </th>
+                        </tr>
+                    {{/each}}
+                </tbody>
+            </table>
+            <div class="row ">
+                <div class="col">
+                    <button type="button" class="btn btn-info">
+                        Смотреть все
+                    </button>
+                </div>
+            </div>
+        </section>
+    </div>
+{{/ admin}}

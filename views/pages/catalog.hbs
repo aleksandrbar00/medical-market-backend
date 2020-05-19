@@ -1,0 +1,243 @@
+{{#> layout}}
+    <div class="app-container">
+        <div class="container">
+            <div class="catalog-wrapper">
+                <div class="catalog__left-bar">
+                    <h1>Каталог</h1>
+                    <div class="catalog-bar__item">
+                        <div class="catalog-bar__item-top">
+                            <span>Пол</span>
+                            <i class="fas fa-chevron-down"></i>
+                        </div>
+                        <div class="catalog-bar__item-select-list">
+                            <ul class="select-list">
+                                <li class="select-list__item">
+                                    <input class="select-checkbox" type="checkbox"/>
+                                    Мужской
+                                </li>
+                                <li class="select-list__item">
+                                    <input class="select-checkbox" type="checkbox"/>
+                                    Женский
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="catalog-bar__item" data-filterName="size">
+                        <div class="catalog-bar__item-top">
+                            <span>Размер</span>
+                            <i class="fas fa-chevron-down"></i>
+                        </div>
+                        <div class="catalog-bar__item-select-list">
+                            <ul class="select-list select-list--column">
+                                <div class="select-list__column">
+                                    <li class="select-list__item">
+                                        <input class="select-checkbox" type="checkbox"/>
+                                        38
+                                    </li>
+                                    <li class="select-list__item">
+                                        <input class="select-checkbox" type="checkbox"/>
+                                        40
+                                    </li>
+                                    <li class="select-list__item">
+                                        <input class="select-checkbox" type="checkbox"/>
+                                        42
+                                    </li>
+                                    <li class="select-list__item">
+                                        <input class="select-checkbox" type="checkbox"/>
+                                        44
+                                    </li>
+                                    <li class="select-list__item">
+                                        <input class="select-checkbox" type="checkbox"/>
+                                        46
+                                    </li>
+                                    <li class="select-list__item">
+                                        <input class="select-checkbox" type="checkbox"/>
+                                        48
+                                    </li>
+                                </div>
+                                <div class="select-list__column">
+                                    <li class="select-list__item">
+                                        <input class="select-checkbox" type="checkbox"/>
+                                        50
+                                    </li>
+                                    <li class="select-list__item">
+                                        <input class="select-checkbox" type="checkbox"/>
+                                        52
+                                    </li>
+                                    <li class="select-list__item">
+                                        <input class="select-checkbox" type="checkbox"/>
+                                        54
+                                    </li>
+                                    <li class="select-list__item">
+                                        <input class="select-checkbox" type="checkbox"/>
+                                        56
+                                    </li>
+
+                                </div>
+
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="catalog-bar__item">
+                        <div class="catalog-bar__item-top">
+                            <span>Бренд</span>
+                            <i class="fas fa-chevron-down"></i>
+                        </div>
+                        <div class="catalog-bar__item-select-list">
+                            <ul class="select-list">
+                                {{#each brandsItems}}
+                                    <li class="select-list__item">
+                                        <input class="select-checkbox" id="filter-value-{{this.title}}" value="{{this.id}}" type="checkbox"/>
+                                        <label for="filter-value-{{this.title}}">{{this.title}}</label>
+                                    </li>
+                                {{/each}}
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="catalog-bar__item">
+                        <div class="catalog-bar__item-top">
+                            <span>Цвет</span>
+                            <i class="fas fa-chevron-down"></i>
+                        </div>
+                        <div class="catalog-bar__item-select-list">
+                            <ul class="select-list">
+                                <li class="select-list__item">
+                                    <input class="select-checkbox" type="checkbox"/>
+                                    Мужской
+                                </li>
+                                <li class="select-list__item">
+                                    <input class="select-checkbox" type="checkbox"/>
+                                    Женский
+                                </li>
+                                <li class="select-list__item">
+                                    <input class="select-checkbox" type="checkbox"/>
+                                    Женский
+                                </li>
+                                <li class="select-list__item">
+                                    <input class="select-checkbox" type="checkbox"/>
+                                    Женский
+                                </li>
+                                <li class="select-list__item">
+                                    <input class="select-checkbox" type="checkbox"/>
+                                    Женский
+                                </li>
+
+                            </ul>
+                        </div>
+                    </div>
+
+
+                    <div class="catalog-bar__item">
+                        <div class="catalog-bar__item-top">
+                            <span>Ткань</span>
+                            <i class="fas fa-chevron-down"></i>
+                        </div>
+                        <div class="catalog-bar__item-select-list">
+                            <ul class="select-list">
+                                <li class="select-list__item">
+                                    <input class="select-checkbox" type="checkbox"/>
+                                    Мужской
+                                </li>
+                                <li class="select-list__item">
+                                    <input class="select-checkbox" type="checkbox"/>
+                                    Женский
+                                </li>
+                                <li class="select-list__item">
+                                    <input class="select-checkbox" type="checkbox"/>
+                                    Женский
+                                </li>
+                                <li class="select-list__item">
+                                    <input class="select-checkbox" type="checkbox"/>
+                                    Женский
+                                </li>
+                                <li class="select-list__item">
+                                    <input class="select-checkbox" type="checkbox"/>
+                                    Женский
+                                </li>
+
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="catalog__left-bar__actions">
+                        <div class="btn">Применить</div>
+                    </div>
+                </div>
+                <div class="catalog__items-list">
+                    <div class="items-list__header">
+                        <div class="page-filter">
+                            <span>Показывать по</span>
+                            <select>
+                                <option value="">9</option>
+                                <option value="">15</option>
+                                <option value="">20</option>
+                                <option value="">30</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="items-list__items">
+                        {{#each pagination.grid}}
+                            <div class="item-card">
+                            <div class="item-card__image">
+                                <img src="{{this.imageLink}}" alt="" class="flex-image">
+                            </div>
+                            <div class="item-card__title">
+                                {{this.title}}
+                            </div>
+                            <div class="item-card__actions">
+                                <a href="/catalog/items/{{this.id}}">
+                                    <div class="btn btn--clear">Смотреть</div>
+                                </a>
+                            </div>
+                        </div>
+                        {{/each}}
+                    </div>
+                    <div class="item-list__pagination pagination">
+                        {{#if pagination.renderFirstButton}}
+                            {{#if pagination.prevUrl}}
+                                <a href="/catalog?page=1">
+                                    <div class="pagination-back pagination__nav">
+                                        <i class="fas fa-angle-double-left"></i>
+                                    </div>
+                                </a>
+                            {{/if}}
+                        {{/if}}
+                        {{#if pagination.renderPrevButton}}
+                            <a href="{{pagination.prevUrl}}">
+                                <div class="pagination-back pagination__nav">
+                                    <i class="fas fa-angle-left"></i>
+                                </div>
+                            </a>
+                        {{/if}}
+                        <div class="pagination__data">
+                            {{#each pagination.paginationButtons}}
+                                <a href="/catalog?page={{this}}" class="pagination__data-button">
+                                    {{this}}
+                                </a>
+                            {{/each}}
+                        </div>
+                        {{#if pagination.renderNextButton}}
+                            {{#if pagination.nextUrl}}
+                                <a href="{{pagination.nextUrl}}">
+                                    <div class="pagination__forward pagination__nav">
+                                        <i class="fas fa-angle-right"></i>
+                                    </div>
+                                </a>
+                            {{/if}}
+                        {{/if}}
+                        {{#if pagination.renderLastButton}}
+                        <a href="/catalog?page={{pagination.totalPages}}">
+                            <div class="pagination__last pagination__nav">
+                                <i class="fas fa-angle-double-right"></i>
+                            </div>
+                        </a>
+                        {{/if}}
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+{{/ layout}}

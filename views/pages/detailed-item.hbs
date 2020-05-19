@@ -1,0 +1,60 @@
+{{#> layout}}
+    <div class="app-container">
+        <div class="container">
+            <div class="med-item-card card">
+                <h1 class="med-item-card_title">{{item.title}}</h1>
+                <div class="card-body">
+                    <div class="med-item-card_img">
+                        <img class="flex-image" src="/{{item.imageLink}}" alt="">
+                    </div>
+                    <div class="med-item-card_info">
+                        <div class="general-info-card">
+                            <ul class="info-list">
+                                <li class="info-list_item">
+                                    <span class="info-label">Категории:</span>
+                                    <div class="info-value">
+                                        Халаты
+                                    </div>
+                                </li>
+                                <li class="info-list_item">
+                                    <span class="info-label">Пол:</span>
+                                    <div class="info-value">
+                                        М
+                                    </div>
+                                </li>
+                                <li class="info-list_item">
+                                    <span class="info-label">Размеры:</span>
+                                    <div class="info-value">
+                                        {{item.size}}
+                                    </div>
+                                </li>
+                                <li class="info-list_item">
+                                    <span class="info-label">Цвет:</span>
+                                    <div class="info-value">
+                                        фуксия
+                                    </div>
+                                </li>
+                                <li class="info-list_item">
+                                    <span class="info-label">Ткань:</span>
+                                    <div class="info-value">
+                                        70/30 хлопок, шерсть
+                                    </div>
+                                </li>
+                                <li class="info-list_item">
+                                    <span class="info-label">Бренд:</span>
+                                    <div class="info-value">
+                                        <a href="#">Бренд123</a>
+                                    </div>
+                                </li>
+                            </ul>
+                            <h2>Описание</h2>
+                            <p class="about-info">
+                                {{item.about}}
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+{{/ layout}}

@@ -1,0 +1,26 @@
+{{#> admin}}
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="col-6">
+                <div class="card p-5 shadow">
+                    <h3>Вход в админ панель</h3>
+                    <form method="post">
+                        <div class="form-group">
+                            <label for="admin-email">Логин</label>
+                            <input type="email" class="form-control" name="email" id="exampleInputEmail1" aria-describedby="admin-email">
+                        </div>
+                        <div class="form-group">
+                            <label for="admin-password">Пароль</label>
+                            <input type="password" class="form-control" name="email" id="admin-password">
+                        </div>
+                        <div class="form-group form-check">
+                            <input type="checkbox" class="form-check-input" id="is-saved-auth">
+                            <label class="form-check-label" for="is-saved-auth">Автоматический вход</label>
+                        </div>
+                        <button type="submit" class="btn btn-primary">Войти</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+{{/ admin}}
