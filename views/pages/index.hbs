@@ -5,9 +5,11 @@
                     <div class="overlay"></div>
                     <div class="main-section__content">
                         <h1 class="main-section__title">Медицинская одежда лучшего качества</h1>
-                    <div class="main-section__btn btn">
-                        Каталог
-                    </div>
+                    <a href="/catalog" class="btn-link">
+                        <div class="main-section__btn btn">
+                            Каталог
+                        </div>
+                    </a>
                     </div>
                 </div>
                 <div class="categories-section">
@@ -42,96 +44,23 @@
                     <div class="slider glide">
                         <div class="glide__track" data-glide-el="track">
                             <ul class="glide__slides">
-                                <li class="glide__slide carousel-row">
-                                    <div class="carousel-item">
-                                        <div class="popular-section__item">
-                                            <div class="popular-section__item-image">
-                                                <img src="https://mirror-world.ru/wp-content/uploads/2019/06/unnamed-file.jpg" alt="" class="section-image">
+                                {{#each popularItems}}
+                                    <li class="glide__slide carousel-row">
+                                        {{#each this}}
+                                            <div class="carousel-item">
+                                                <div class="popular-section__item">
+                                                    <div class="popular-section__item-image">
+                                                        <img src="{{this.imageLink}}" alt="" class="section-image">
+                                                    </div>
+                                                    <div class="popular-section__item-title">
+                                                        <a href="/catalog/items/{{this.id}}">{{this.name}}</a>
+                                                    </div>
+                                                    <div class="shadow-block"></div>
+                                                </div>
                                             </div>
-                                            <div class="popular-section__item-title">
-                                                <a href="#">Халат женский FDSasd</a>
-                                            </div>
-                                            <div class="shadow-block"></div>
-                                        </div>
-                                    </div>
-                                    <div class="carousel-item">
-                                        <div class="popular-section__item">
-                                            <div class="popular-section__item-image">
-                                                <img src="http://ae01.alicdn.com/kf/HTB1R.xeRVXXXXXyaFXXq6xXFXXXp.jpg_q50.jpg" alt="" class="section-image">
-                                            </div>
-                                            <div class="popular-section__item-title">
-                                                <a href="#">Халат женский FDSasd</a>
-                                            </div>
-                                            <div class="shadow-block"></div>
-                                        </div>
-                                    </div>
-                                    <div class="carousel-item">
-                                        <div class="popular-section__item">
-                                            <div class="popular-section__item-image">
-                                                <img src="https://lipetsk.shop.tdelit.ru/images/cms/thumbs/635c7a8a31717bf7f5c466a77081962a62131e03/14-1494_3-4_u_1_720_auto_5_100.jpg" alt="" class="section-image">
-                                            </div>
-                                            <div class="popular-section__item-title">
-                                                <a href="#">Халат женский FDSasd</a>
-                                            </div>
-                                            <div class="shadow-block"></div>
-                                        </div>
-                                    </div>
-                                    <div class="carousel-item">
-                                        <div class="popular-section__item">
-                                            <img src="http://ae01.alicdn.com/kf/HTB1R.xeRVXXXXXyaFXXq6xXFXXXp.jpg_q50.jpg" alt="" class="section-image">
-                                            <div class="popular-section__item-title">
-                                                <a href="#">Халат женский FDSasd</a>
-                                            </div>
-                                            <div class="shadow-block"></div>
-                                        </div>
-                                    </div>
-                                    
-                                </li>
-                                <li class="glide__slide carousel-row">
-                                    <div class="carousel-item">
-                                        <div class="popular-section__item">
-                                            <div class="popular-section__item-image">
-                                                <img src="https://mirror-world.ru/wp-content/uploads/2019/06/unnamed-file.jpg" alt="" class="section-image">
-                                            </div>
-                                            <div class="popular-section__item-title">
-                                                <a href="#">Халат женский FDSasd</a>
-                                            </div>
-                                            <div class="shadow-block"></div>
-                                        </div>
-                                    </div>
-                                    <div class="carousel-item">
-                                        <div class="popular-section__item">
-                                            <div class="popular-section__item-image">
-                                                <img src="http://ae01.alicdn.com/kf/HTB1R.xeRVXXXXXyaFXXq6xXFXXXp.jpg_q50.jpg" alt="" class="section-image">
-                                            </div>
-                                            <div class="popular-section__item-title">
-                                                <a href="#">Халат женский FDSasd</a>
-                                            </div>
-                                            <div class="shadow-block"></div>
-                                        </div>
-                                    </div>
-                                    <div class="carousel-item">
-                                        <div class="popular-section__item">
-                                            <div class="popular-section__item-image">
-                                                <img src="https://lipetsk.shop.tdelit.ru/images/cms/thumbs/635c7a8a31717bf7f5c466a77081962a62131e03/14-1494_3-4_u_1_720_auto_5_100.jpg" alt="" class="section-image">
-                                            </div>
-                                            <div class="popular-section__item-title">
-                                                <a href="#">Халат женский FDSasd</a>
-                                            </div>
-                                            <div class="shadow-block"></div>
-                                        </div>
-                                    </div>
-                                    <div class="carousel-item">
-                                        <div class="popular-section__item">
-                                            <img src="http://ae01.alicdn.com/kf/HTB1R.xeRVXXXXXyaFXXq6xXFXXXp.jpg_q50.jpg" alt="" class="section-image">
-                                            <div class="popular-section__item-title">
-                                                <a href="#">Халат женский FDSasd</a>
-                                            </div>
-                                            <div class="shadow-block"></div>
-                                        </div>
-                                    </div>
-                                    
-                                </li>
+                                        {{/each}}
+                                    </li>
+                                {{/each}}
                             </ul>
                         </div>
                         <div class="glide__arrows" data-glide-el="controls">
@@ -211,4 +140,5 @@
                 </div>
             </div>
         </div>
+        <script src='/js/appCarousel.js'></script>
 {{/layout}}
