@@ -8,6 +8,7 @@ const initDbModels = async () => {
     try{
         await ClothItem.sync({force: true})
         await ShopBrand.sync({force: true})
+        await ShopItemCategory.sync({force: true})
         await ShopItem.sync({force: true})
     }catch(err){
         console.log(err)
@@ -108,4 +109,4 @@ const fakeItems = async () => {
     }catch(err){}
 }
 
-fakeItems()
+initDbModels()

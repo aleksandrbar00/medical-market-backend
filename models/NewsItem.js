@@ -6,6 +6,7 @@ class NewsItem extends Model {}
 NewsItem.init({
     title: {
         type: Sequelize.STRING,
+
     },
     content: {
         type: Sequelize.TEXT,
